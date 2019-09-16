@@ -3,32 +3,32 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "labs-app": {
+    "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/labs-app",
-      "sourceRoot": "projects/labs-app/src",
+      "root": "projects/app",
+      "sourceRoot": "projects/app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/labs-app",
-            "index": "projects/labs-app/src/index.html",
-            "main": "projects/labs-app/src/main.ts",
-            "polyfills": "projects/labs-app/src/polyfills.ts",
-            "tsConfig": "projects/labs-app/tsconfig.app.json",
+            "outputPath": "dist/app",
+            "index": "projects/app/src/index.html",
+            "main": "projects/app/src/main.ts",
+            "polyfills": "projects/app/src/polyfills.ts",
+            "tsConfig": "projects/app/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/labs-app/src/favicon.ico",
-              "projects/labs-app/src/assets"
+              "projects/app/src/favicon.ico",
+              "projects/app/src/assets"
             ],
             "styles": [
-              "projects/labs-app/src/styles.scss"
+              "projects/app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/labs-app/src/environments/environment.ts",
-                  "with": "projects/labs-app/src/environments/environment.prod.ts"
+                  "replace": "projects/app/src/environments/environment.ts",
+                  "with": "projects/app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -66,33 +66,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "labs-app:build"
+            "browserTarget": "app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "labs-app:build:production"
+              "browserTarget": "app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "labs-app:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/labs-app/src/test.ts",
-            "polyfills": "projects/labs-app/src/polyfills.ts",
-            "tsConfig": "projects/labs-app/tsconfig.spec.json",
-            "karmaConfig": "projects/labs-app/karma.conf.js",
+            "main": "projects/app/src/test.ts",
+            "polyfills": "projects/app/src/polyfills.ts",
+            "tsConfig": "projects/app/tsconfig.spec.json",
+            "karmaConfig": "projects/app/karma.conf.js",
             "assets": [
-              "projects/labs-app/src/favicon.ico",
-              "projects/labs-app/src/assets"
+              "projects/app/src/favicon.ico",
+              "projects/app/src/assets"
             ],
             "styles": [
-              "projects/labs-app/src/styles.scss"
+              "projects/app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -101,9 +101,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/labs-app/tsconfig.app.json",
-              "projects/labs-app/tsconfig.spec.json",
-              "projects/labs-app/e2e/tsconfig.json"
+              "projects/app/tsconfig.app.json",
+              "projects/app/tsconfig.spec.json",
+              "projects/app/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -113,49 +113,49 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/labs-app/e2e/protractor.conf.js",
-            "devServerTarget": "labs-app:serve"
+            "protractorConfig": "projects/app/e2e/protractor.conf.js",
+            "devServerTarget": "app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "labs-app:serve:production"
+              "devServerTarget": "app:serve:production"
             }
           }
         }
       }
     },
-    "labs-common": {
+    "common": {
       "projectType": "library",
-      "root": "projects/labs/common",
-      "sourceRoot": "projects/labs/common/src",
+      "root": "projects/common",
+      "sourceRoot": "projects/common/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/labs/common/tsconfig.lib.json",
-            "project": "projects/labs/common/ng-package.json"
+            "tsConfig": "projects/common/tsconfig.lib.json",
+            "project": "projects/common/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/labs/common/tsconfig.lib.prod.json"
+              "tsConfig": "projects/common/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/labs/common/src/test.ts",
-            "tsConfig": "projects/labs/common/tsconfig.spec.json",
-            "karmaConfig": "projects/labs/common/karma.conf.js"
+            "main": "projects/common/src/test.ts",
+            "tsConfig": "projects/common/tsconfig.spec.json",
+            "karmaConfig": "projects/common/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/labs/common/tsconfig.lib.json",
-              "projects/labs/common/tsconfig.spec.json"
+              "projects/common/tsconfig.lib.json",
+              "projects/common/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -164,5 +164,5 @@
         }
       }
     }},
-  "defaultProject": "labs-app"
+  "defaultProject": "app"
 }

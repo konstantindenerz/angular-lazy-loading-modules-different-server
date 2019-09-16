@@ -5,7 +5,12 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "paths": {
+      "@labs/common": [
+        "projects/common"
+      ]
+    }
   },
   "files": [
     "src/test.ts",

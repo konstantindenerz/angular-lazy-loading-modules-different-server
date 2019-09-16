@@ -5,7 +5,7 @@
     "types": [],
     "paths": {
       "@labs/common": [
-        "projects/labs/common"
+        "projects/common"
       ]
     }
   },
