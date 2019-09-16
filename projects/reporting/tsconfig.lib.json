@@ -19,11 +19,6 @@
   },
   "exclude": [
     "src/test.ts",
-    "**/*.spec.ts",
-    "../reporting/**/*.spec.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts",
-    "../reporting/**/*.d.ts"
-  ],
+    "**/*.spec.ts"
+  ]
 }

@@ -1,11 +1,14 @@
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
-import {DashboardComponent} from './components/dashboard/dashboard.component';
-import {MenuComponent} from './components/menu/menu.component';
+import {RouterModule} from '@angular/router';
+import {ALL_COMPONENTS} from './components/all.components';
+import {CORE_ROUTES} from './core.routes';
 
 @NgModule({
-  declarations: [DashboardComponent, MenuComponent],
-  imports: [],
-  exports: [DashboardComponent, MenuComponent],
+  declarations: [...ALL_COMPONENTS],
+  imports: [CommonModule, HttpClientModule, RouterModule.forChild(CORE_ROUTES)],
+  exports: [...ALL_COMPONENTS],
 })
 export class CoreModule {
 }

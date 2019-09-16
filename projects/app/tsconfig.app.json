@@ -14,6 +14,10 @@
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "../reporting/**/*.d.ts"
+  ],
+  "exclude": [
+    "../reporting/**/*.spec.ts"
   ]
 }

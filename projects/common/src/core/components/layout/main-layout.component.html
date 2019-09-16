@@ -1,0 +1,4 @@
+<ng-container *ngIf="modules$ | async as modules">
+  <labs-menu [items]="modules"></labs-menu>
+  <router-outlet></router-outlet>
+</ng-container>
