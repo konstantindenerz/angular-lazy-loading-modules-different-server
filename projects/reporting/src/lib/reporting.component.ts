@@ -1,13 +1,16 @@
 import {Component} from '@angular/core';
+import {Context} from '@labs/common';
 
 @Component({
-  selector: 'lib-reporting',
+  selector: 'labs-reporting',
   template: `
     <p>
       reporting works! (lazy loaded module)
+      {{context | json}}
     </p>
   `,
-  styles: [],
 })
 export class ReportingComponent {
+  constructor(readonly context: Context) {
+  }
 }

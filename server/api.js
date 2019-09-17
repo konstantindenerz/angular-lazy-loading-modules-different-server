@@ -23,10 +23,11 @@ const mocks = MockBase => class ServerApi extends MockBase {
                 name: 'Administration',
                 id: 'admin',
                 preload: true,
-                selector: 'labs-foo',
+                selector: 'labs-admin',
                 files: [
                   'styles-es2015.js',
                   'runtime-es2015.js',
+                  // 'vendor-es2015.js', dev build only
                   'main-es2015.js',
                 ],
               },
@@ -39,7 +40,7 @@ const mocks = MockBase => class ServerApi extends MockBase {
         responses: [{
           response: ctx => {
             ctx.set('Content-Type', 'application/javascript');
-            ctx.body = fs.createReadStream(`server/${ctx.request.url}`);
+            ctx.body = fs.createReadStream(`server${ctx.request.url}`);
           },
         }],
       },

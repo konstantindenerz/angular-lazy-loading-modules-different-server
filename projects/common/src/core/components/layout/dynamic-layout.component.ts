@@ -1,6 +1,7 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, Injector, OnInit, ViewContainerRef} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {combineLatest} from 'rxjs';
+import {Context} from '../../services/context';
 import {ModuleService} from '../../services/module.service';
 
 @Component({
@@ -12,23 +13,21 @@ export class DynamicLayoutComponent implements OnInit {
     readonly moduleService: ModuleService,
     readonly elementRef: ElementRef,
     readonly activatedRoute: ActivatedRoute,
+    readonly injector: Injector,
+    readonly context: Context,
+    readonly viewContainerRef: ViewContainerRef
   ) {
   }
 
   public ngOnInit(): void {
     combineLatest(this.moduleService.modules, this.activatedRoute.params).subscribe(([modules, { id }]) => {
-      const { files, url, selector } = modules.find(current => current.id === id);
-      const entryComponent = document.createElement(selector);
-      this.elementRef.nativeElement.appendChild(entryComponent);
-      files.forEach((file) => {
-          const fileUrl = `http://localhost:4201${url}/${file}`;
-          const script = document.createElement('script');
-          script.type = 'module';
-          script.src = fileUrl;
-          this.elementRef.nativeElement.appendChild(script);
-        },
-      );
+      this.viewContainerRef.clear();
+      this.moduleService.load(modules.find(current => current.id === id), this.elementRef.nativeElement);
     });
   }
 
+  @HostListener('document:activate-module', ['$event.detail'])
+  public bootstrap(module: { bootstrap: (parentContext: any) => void }) {
+    module.bootstrap(this.context);
+  }
 }

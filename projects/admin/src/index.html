@@ -8,6 +8,10 @@
   <link rel="icon" type="image/x-icon" href="projects/admin/src/favicon.ico">
 </head>
 <body>
-  <labs-foo></labs-foo>
+<script>document.addEventListener('module-initialized', (e) => {
+  console.log({ e });
+  e.detail.bootstrap({ settings: { title: 'Labs' } });
+})</script>
+<labs-admin></labs-admin>
 </body>
 </html>

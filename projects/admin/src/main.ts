@@ -1,12 +1,12 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {AdminModule} from './app/admin.module';
 
-import {AppModule} from './app/app.module';
 import {environment} from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule, { ngZone: 'noop' })
+platformBrowserDynamic().bootstrapModule(AdminModule, { ngZone: 'noop' })
   .catch(err => console.error(err));
