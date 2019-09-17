@@ -16,7 +16,7 @@ export class DynamicLayoutComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    combineLatest(this.moduleService.getAll(), this.activatedRoute.params).subscribe(([modules, { id }]) => {
+    combineLatest(this.moduleService.modules, this.activatedRoute.params).subscribe(([modules, { id }]) => {
       const { files, url, selector } = modules.find(current => current.id === id);
       const entryComponent = document.createElement(selector);
       this.elementRef.nativeElement.appendChild(entryComponent);

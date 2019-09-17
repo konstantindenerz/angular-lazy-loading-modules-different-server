@@ -14,6 +14,6 @@ export class MainLayoutComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.modules$ = this.moduleService.getAll();
+    this.modules$ = this.moduleService.modules;
   }
 }
