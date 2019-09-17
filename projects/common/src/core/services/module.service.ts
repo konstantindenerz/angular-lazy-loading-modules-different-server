@@ -1,5 +1,5 @@
 import {HttpClient} from '@angular/common/http';
-import {Injectable, NgModuleFactoryLoader} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../app/src/environments/environment';
 import {Module} from '../models/module';
@@ -9,7 +9,7 @@ import {Module} from '../models/module';
 })
 export class ModuleService {
 
-  constructor(readonly httpClient: HttpClient, readonly loader: NgModuleFactoryLoader) {
+  constructor(readonly httpClient: HttpClient) {
 
   }
 

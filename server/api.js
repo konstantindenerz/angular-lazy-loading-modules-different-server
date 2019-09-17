@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const mocks = MockBase => class ServerApi extends MockBase {
   mocks() {
     const mocks = [
@@ -16,8 +18,28 @@ const mocks = MockBase => class ServerApi extends MockBase {
             ctx.body = [
               { url: '/dashboard', name: 'Dashboard' },
               { url: '/reporting', name: 'Reporting' },
-              { url: '/admin', name: 'Administration' },
+              {
+                url: '/module/admin',
+                name: 'Administration',
+                id: 'admin',
+                preload: true,
+                selector: 'labs-foo',
+                files: [
+                  'styles-es2015.js',
+                  'runtime-es2015.js',
+                  'main-es2015.js',
+                ],
+              },
             ];
+          },
+        }],
+      },
+      {
+        route: '/module/admin*',
+        responses: [{
+          response: ctx => {
+            ctx.set('Content-Type', 'application/javascript');
+            ctx.body = fs.createReadStream(`server/${ctx.request.url}`);
           },
         }],
       },

@@ -17,15 +17,19 @@
     "@angular/common": "~9.0.0-next.5",
     "@angular/compiler": "~9.0.0-next.5",
     "@angular/core": "~9.0.0-next.5",
+    "@angular/elements": "^8.2.6",
     "@angular/forms": "~9.0.0-next.5",
     "@angular/platform-browser": "~9.0.0-next.5",
     "@angular/platform-browser-dynamic": "~9.0.0-next.5",
     "@angular/router": "~9.0.0-next.5",
+    "ngx-build-plus": "^8.1.4",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.1"
+    "zone.js": "~0.10.1",
+    "document-register-element": "^1.7.2"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^8.2.0",
     "@angular-devkit/build-angular": "~0.900.0-next.4",
     "@angular-devkit/build-ng-packagr": "~0.900.0-next.4",
     "@angular/cli": "~9.0.0-next.4",

@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'lib-reporting',
   template: `
     <p>
-      reporting works!
+      reporting works! (lazy loaded module)
     </p>
   `,
-  styles: []
+  styles: [],
 })
-export class ReportingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ReportingComponent {
 }

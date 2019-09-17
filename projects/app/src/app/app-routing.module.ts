@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DashboardComponent, MainLayoutComponent} from '@labs/common';
+import {DashboardComponent, DynamicLayoutComponent, MainLayoutComponent} from '@labs/common';
 
 const routes: Routes = [
   {
@@ -11,6 +11,9 @@ const routes: Routes = [
       {
         path: 'reporting',
         loadChildren: () => import('projects/reporting/src/lib/reporting.module').then((m) => m.ReportingModule),
+      },
+      {
+        path: 'module/:id', component: DynamicLayoutComponent,
       },
     ],
   },
