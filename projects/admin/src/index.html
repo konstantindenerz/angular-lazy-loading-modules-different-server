@@ -8,9 +8,9 @@
   <link rel="icon" type="image/x-icon" href="projects/admin/src/favicon.ico">
 </head>
 <body>
-<script>document.addEventListener('module-initialized', (e) => {
+<script>document.addEventListener('activate-module', (e) => {
   console.log({ e });
-  e.detail.bootstrap({ settings: { title: 'Labs' } });
+  e.detail.init({ settings: { title: 'Foobar' } });
 })</script>
 <labs-admin></labs-admin>
 </body>

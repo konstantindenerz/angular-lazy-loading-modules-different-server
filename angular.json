@@ -25,7 +25,7 @@
             "aot": true,
             "assets": [
               "projects/app/src/favicon.ico",
-              "projects/app/src/assets"
+              "projects/app/src/assets",
             ],
             "styles": [
               "projects/app/src/styles.scss"
@@ -218,12 +218,12 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./extra-webpack.config.js",
+              "path": "./projects/admin/extra-webpack.config.js",
               "mergeStrategies": {
                 "externals": "replace"
               }
             },
-            "outputPath": "dist/admin",
+            "outputPath": "server/module/admin",
             "index": "projects/admin/src/index.html",
             "main": "projects/admin/src/main.ts",
             "polyfills": "projects/admin/src/polyfills.ts",

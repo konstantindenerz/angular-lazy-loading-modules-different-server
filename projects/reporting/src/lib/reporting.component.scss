@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+img {
+  width: 200px;
+}
+
+.module-logo {
+  width: 200px;
+  height: 200px;
+  background: url("~/assets/lazy-loading.svg") center center no-repeat;
+}

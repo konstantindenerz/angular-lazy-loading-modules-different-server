@@ -1,7 +1,18 @@
 :host {
-  display: block;
+  display: flex;
+  padding-bottom: 10px;
 }
 
 a {
-  padding: 20px;
+  padding: 10px;
+  color: rgb(40,40,40);
+  text-decoration: none;
+  transition: all .3s ease;
+  opacity: .4;
+  border-bottom: 1px solid transparent;
+
+  &.active {
+    border-bottom: 1px solid red;
+    opacity: 1;
+  }
 }

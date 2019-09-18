@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --raw \"npm run serve\" \"npm run api\"",
-    "build": "ng build",
+    "start": "concurrently --raw \"npm run build-admin\" \"npm run serve\" \"npm run api\"",
     "serve": "ng serve",
+    "build-admin": "ng build admin --prod --deployUrl=http://localhost:4201/module/admin",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

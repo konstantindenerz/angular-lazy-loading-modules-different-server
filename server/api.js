@@ -15,6 +15,7 @@ const mocks = MockBase => class ServerApi extends MockBase {
         route: '/modules',
         responses: [{
           response: ctx => {
+            const now = Date.now();
             ctx.body = [
               { url: '/dashboard', name: 'Dashboard' },
               { url: '/reporting', name: 'Reporting' },
@@ -25,10 +26,10 @@ const mocks = MockBase => class ServerApi extends MockBase {
                 preload: true,
                 selector: 'labs-admin',
                 files: [
-                  'styles-es2015.js',
-                  'runtime-es2015.js',
-                  // 'vendor-es2015.js', dev build only
-                  'main-es2015.js',
+                  `styles-es2015.js?v=${now}`,
+                  `runtime-es2015.js?v=${now}`,
+                  // `vendor-es2015.js?v=${now}`, // dev build only
+                  `main-es2015.js?v=${now}`,
                 ],
               },
             ];
@@ -39,8 +40,12 @@ const mocks = MockBase => class ServerApi extends MockBase {
         route: '/module/admin*',
         responses: [{
           response: ctx => {
-            ctx.set('Content-Type', 'application/javascript');
-            ctx.body = fs.createReadStream(`server${ctx.request.url}`);
+            if (ctx.request.url.indexOf('assets') === -1) {
+              ctx.set('Content-Type', 'application/javascript');
+            } else {
+              ctx.set('Content-Type', 'image/svg+xml');
+            }
+            ctx.body = fs.createReadStream(`server${ctx.request.url.split('?')[0]}`);
           },
         }],
       },

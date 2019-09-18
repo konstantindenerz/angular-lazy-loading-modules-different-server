@@ -6,6 +6,7 @@ import {ModuleService} from '../../services/module.service';
 @Component({
   selector: 'labs-main-layout',
   templateUrl: 'main-layout.component.html',
+  styleUrls: ['main-layout.component.scss']
 })
 export class MainLayoutComponent implements OnInit {
   public modules$: Observable<Module[]>;

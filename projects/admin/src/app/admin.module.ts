@@ -5,7 +5,9 @@ import {ModuleService} from '@labs/common';
 import {AdminComponent} from './components/admin.component';
 import {Context} from './models/context';
 
-const components = { 'labs-admin': AdminComponent };
+const components = {
+  'labs-admin': AdminComponent,
+};
 
 @NgModule({
   declarations: [

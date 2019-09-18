@@ -1,8 +1,8 @@
 {
   "name": "@labs/reporting",
   "version": "0.0.1",
-  "main": "src/public-api.ts",
-  "typings": "src/reporting.d.ts",
+  "main": "public-api.ts",
+  "typings": "reporting.d.ts",
   "peerDependencies": {
     "@angular/common": "^9.0.0-next.5",
     "@angular/core": "^9.0.0-next.5"

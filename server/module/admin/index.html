@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>@labs/admin</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="projects/admin/src/favicon.ico">
+</head>
+<body>
+<script>document.addEventListener('activate-module', (e) => {
+  console.log({ e });
+  e.detail.init({ settings: { title: 'Foobar' } });
+})</script>
+<labs-admin></labs-admin>
+<script src="http://localhost:4201/module/adminpolyfills-es5.js" nomodule defer></script><script src="http://localhost:4201/module/adminpolyfills-es2015.js" type="module"></script><script src="http://localhost:4201/module/adminstyles-es2015.js" type="module"></script><script src="http://localhost:4201/module/adminstyles-es5.js" nomodule defer></script><script src="http://localhost:4201/module/adminruntime-es2015.js" type="module"></script><script src="http://localhost:4201/module/adminmain-es2015.js" type="module"></script><script src="http://localhost:4201/module/adminruntime-es5.js" nomodule defer></script><script src="http://localhost:4201/module/adminmain-es5.js" nomodule defer></script></body>
+</html>
