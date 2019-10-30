@@ -9,8 +9,8 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', component: DashboardComponent },
       {
-        path: 'reporting',
-        loadChildren: () => import('projects/reporting/src/lib/reporting.module').then((m) => m.ReportingModule),
+        path: 'settings',
+        loadChildren: () => import('projects/settings/src/lib/settings.module').then((m) => m.SettingsModule),
       },
       {
         path: 'module/:id', component: DynamicLayoutComponent,

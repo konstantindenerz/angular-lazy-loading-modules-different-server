@@ -15,9 +15,9 @@
   ],
   "include": [
     "src/**/*.d.ts",
-    "../reporting/**/*.d.ts"
+    "../settings/**/*.d.ts"
   ],
   "exclude": [
-    "../reporting/**/*.spec.ts"
+    "../settings/**/*.spec.ts"
   ]
 }

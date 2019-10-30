@@ -18,7 +18,6 @@ const mocks = MockBase => class ServerApi extends MockBase {
             const now = Date.now();
             ctx.body = [
               { url: '/dashboard', name: 'Dashboard' },
-              { url: '/reporting', name: 'Reporting' },
               {
                 url: '/module/admin',
                 name: 'Administration',
@@ -32,6 +31,7 @@ const mocks = MockBase => class ServerApi extends MockBase {
                   `main-es2015.js?v=${now}`,
                 ],
               },
+              { url: '/settings', name: 'Settings' },
             ];
           },
         }],
