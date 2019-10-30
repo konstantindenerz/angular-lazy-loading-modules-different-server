@@ -21,7 +21,23 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot([
+    {
+      path: '', component: MainLayoutComponent,
+      children: [
+        { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+        { path: 'dashboard', component: DashboardComponent },
+        {
+          path: 'settings',
+          loadChildren: () => import('projects/settings/src/lib/settings.module').then(m => m.SettingsModule),
+        },
+        {
+          path: 'module/:id', component: DynamicLayoutComponent,
+        },
+      ],
+    },
+
+  ], { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {

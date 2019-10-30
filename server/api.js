@@ -19,11 +19,11 @@ const mocks = MockBase => class ServerApi extends MockBase {
             ctx.body = [
               { url: '/dashboard', name: 'Dashboard' },
               {
-                url: '/module/admin',
-                name: 'Administration',
-                id: 'admin',
+                url: '/module/reporting',
+                name: 'Reporting',
+                id: 'reporting',
                 preload: true,
-                selector: 'labs-admin',
+                selector: 'labs-reporting',
                 files: [
                   `styles-es2015.js?v=${now}`,
                   `runtime-es2015.js?v=${now}`,
@@ -37,7 +37,7 @@ const mocks = MockBase => class ServerApi extends MockBase {
         }],
       },
       {
-        route: '/module/admin*',
+        route: '/module/reporting*',
         responses: [{
           response: ctx => {
             if (ctx.request.url.indexOf('assets') === -1) {

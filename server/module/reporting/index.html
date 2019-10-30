@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>@labs/reporting</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="projects/reporting/src/favicon.ico">
+</head>
+<body>
+<script>document.addEventListener('activate-module', (e) => {
+  console.log({ e });
+  e.detail.init({ settings: { title: 'Foobar' } });
+})</script>
+<labs-reporting></labs-reporting>
+<script src="http://localhost:4201/module/reportingpolyfills-es5.js" nomodule defer></script><script src="http://localhost:4201/module/reportingpolyfills-es2015.js" type="module"></script><script src="http://localhost:4201/module/reportingstyles-es2015.js" type="module"></script><script src="http://localhost:4201/module/reportingstyles-es5.js" nomodule defer></script><script src="http://localhost:4201/module/reportingruntime-es2015.js" type="module"></script><script src="http://localhost:4201/module/reportingmain-es2015.js" type="module"></script><script src="http://localhost:4201/module/reportingruntime-es5.js" nomodule defer></script><script src="http://localhost:4201/module/reportingmain-es5.js" nomodule defer></script></body>
+</html>

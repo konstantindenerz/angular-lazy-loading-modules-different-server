@@ -27,8 +27,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 3. `npm start` to start the demo.
 
-    - creates an production build of admin (custom elements bundle) and copies it to the `server/module/admin` Folder.
-    - starts the mock api server to provide modules information and admin bundle
+    - creates an production build of reporting (custom elements bundle) and copies it to the `server/module/reporting` Folder.
+    - starts the mock api server to provide modules information and reporting bundle
     - starts the demo app
   
 

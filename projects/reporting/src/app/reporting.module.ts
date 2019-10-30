@@ -2,25 +2,25 @@ import {Injector, NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {ModuleService} from '@labs/common';
-import {AdminComponent} from './components/admin.component';
+import {ReportingComponent} from './components/reporting.component';
 import {Context} from './models/context';
 
 const components = {
-  'labs-admin': AdminComponent,
+  'labs-reporting': ReportingComponent,
 };
 
 @NgModule({
   declarations: [
-    AdminComponent,
+    ReportingComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
   ],
   providers: [],
-  entryComponents: [AdminComponent],
+  entryComponents: [ReportingComponent],
 })
-export class AdminModule {
+export class ReportingModule {
   constructor(private injector: Injector) {
   }
 
