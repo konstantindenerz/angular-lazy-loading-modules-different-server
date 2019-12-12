@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, Injector, OnDestroy, OnInit, ViewContainerRef} from '@angular/core';
+import {Component, ElementRef, HostListener, OnDestroy, OnInit, ViewContainerRef} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {combineLatest, Subscription} from 'rxjs';
 import {Context} from '../../services/context';
@@ -16,7 +16,6 @@ export class DynamicLayoutComponent implements OnInit, OnDestroy {
     readonly moduleService: ModuleService,
     readonly elementRef: ElementRef,
     readonly activatedRoute: ActivatedRoute,
-    readonly injector: Injector,
     readonly context: Context,
     readonly viewContainerRef: ViewContainerRef,
   ) {

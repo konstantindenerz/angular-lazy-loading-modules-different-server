@@ -1,5 +1,4 @@
 import {Injector, NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {ModuleService} from '@labs/common';
 import {ReportingComponent} from './components/reporting.component';
@@ -15,7 +14,6 @@ const components = {
   ],
   imports: [
     BrowserModule,
-    FormsModule,
   ],
   providers: [],
   entryComponents: [ReportingComponent],

@@ -6,18 +6,16 @@ This project demonstrates several ways to load multiple modules.
 * Another way is to create an *custom elements* bundle and load it via script element: `<script type=module src="http://...>`"
 
 The state (store) / context is shared between modules and application.
+
+![Preview](demo-preview.png)
  
-## Preview
-
-
-[![preview](preview.png)](https://stackblitz.com/github/konstantindenerz/angular-lazy-loading-modules-different-server)
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-next.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.5.
 
 ## Prerequesits
 
-- Node V. 10.9.x or later
-- Angular CLI 9.0.0-next.4
+
+- Node V. 10.13.x or later
+- Angular CLI 9.0.0-rc.5
 
 ## Start
 

@@ -2,10 +2,34 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  align-items: center;
+  padding-top: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
+
 
 .module-logo {
   width: 200px;
   height: 200px;
   background: url("~/assets/components.svg") center center no-repeat;
+  margin-bottom: 60px;
+}
+
+
+img {
+  width: 200px;
+}
+
+div {
+  font-size: 42px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+strong {
+  opacity: 0.8;
 }

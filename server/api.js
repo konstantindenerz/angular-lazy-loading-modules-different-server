@@ -17,21 +17,22 @@ const mocks = MockBase => class ServerApi extends MockBase {
           response: ctx => {
             const now = Date.now();
             ctx.body = [
-              { url: '/dashboard', name: 'Dashboard' },
+              { url: '/home', name: 'Home', icon: 'home' },
               {
                 url: '/module/reporting',
                 name: 'Reporting',
                 id: 'reporting',
                 preload: true,
                 selector: 'labs-reporting',
+                icon: 'chart-pie',
                 files: [
-                  `styles-es2015.js?v=${now}`,
-                  `runtime-es2015.js?v=${now}`,
-                  // `vendor-es2015.js?v=${now}`, // dev build only
-                  `main-es2015.js?v=${now}`,
+                  `runtime.js?v=${now}`,
+                  `polyfills.js?v=${now}`,
+                  `styles.js?v=${now}`,
+                  `main.js?v=${now}`,
                 ],
               },
-              { url: '/settings', name: 'Settings' },
+              { url: '/settings', name: 'Settings', icon: 'cog'},
             ];
           },
         }],

@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.6 200"><defs><style>.cls-1{fill:#448aff;}.cls-2{fill:#2979ff;}.cls-3{fill:#fff;}.cls-4{fill:#a2c5ff;}</style></defs><title>components</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="92.4 0 92.4 0 92.4 0 0 33.3 14 156.1 92.4 200 92.4 200 92.4 200 171.3 156.1 185.6 33.3 92.4 0"/><polygon class="cls-2" points="92.4 0 92.4 22.2 92.4 22.2 92.4 123.2 92.4 123.2 92.4 200 92.4 200 171.3 156.1 185.6 33.3 92.4 0"/><polygon class="cls-3" points="73.6 131.4 54.3 98 84.3 46.1 62.8 46.1 32.8 98 62.8 150 84.4 150 73.6 131.4 73.6 131.4"/><polygon class="cls-4" points="152.8 98 122.8 46.1 84.3 46.1 54.3 98 73.6 64.7 112.1 64.7 131.3 98 112.1 131.4 73.6 131.4 84.4 150 122.8 150 152.8 98"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="188px" height="200px" viewBox="0 0 188 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>components (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="components-(1)" fill-rule="nonzero">
+            <path d="M93.3935484,0 L187.595699,33.3 L173.141935,156.1 L93.3935484,200 L14.1505376,156.1 L-2.98427949e-13,33.3 L93.3935484,0 Z M124.12043,46.1 L63.4752688,46.1 L33.1526882,98 L63.4752688,150 L124.12043,150 L154.443011,98 L124.12043,46.1 Z M113.305376,64.7 L132.711828,98 L113.305376,131.4 L74.3913978,131.4 L54.883871,98 L74.3913978,64.7 L113.305376,64.7 Z" id="Combined-Shape" fill="#FF5950"></path>
+            <path d="M93.3935484,0 L187.595699,33.3 L173.141935,156.1 L93.3935484,200 L93.3935484,149.999 L124.12043,150 L154.443011,98 L124.12043,46.1 L93.3935484,46.099 L93.3935484,0 Z M113.305376,64.7 L132.711828,98 L113.305376,131.4 L93.3935484,131.399 L93.3935484,64.699 L113.305376,64.7 Z" id="Combined-Shape" fill="#D55851"></path>
+            <polygon id="Path" fill="#FFFFFF" opacity="0.118954613" points="154.443011 98 124.12043 46.1 85.2064516 46.1 54.883871 98 74.3913978 64.7 113.305376 64.7 132.711828 98 113.305376 131.4 74.3913978 131.4 85.3075269 150 124.12043 150"></polygon>
+        </g>
+    </g>
+</svg>

@@ -7,5 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class MenuComponent {
   @Input()
-  items: {url: string, name: string}[];
+  items: {url: string, name: string, icon: string}[];
 }

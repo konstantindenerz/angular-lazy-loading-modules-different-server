@@ -4,19 +4,19 @@
   "main": "public-api.ts",
   "typings": "common.d.ts",
   "peerDependencies": {
-    "@angular/common": "^9.0.0-next.5",
-    "@angular/core": "^9.0.0-next.5"
-  },
-  "__processed_by_ivy_ngcc__": {
-    "fesm2015": "9.0.0-next.6",
-    "fesm5": "9.0.0-next.6",
-    "es2015": "9.0.0-next.6",
-    "esm2015": "9.0.0-next.6",
-    "esm5": "9.0.0-next.6",
-    "main": "9.0.0-next.6",
-    "module": "9.0.0-next.6"
+    "@angular/common": "^9.0.0-next.15",
+    "@angular/core": "^9.0.0-next.15"
   },
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  },
+  "__processed_by_ivy_ngcc__": {
+    "fesm2015": "9.0.0-rc.5",
+    "fesm5": "9.0.0-rc.5",
+    "es2015": "9.0.0-rc.5",
+    "esm2015": "9.0.0-rc.5",
+    "esm5": "9.0.0-rc.5",
+    "main": "9.0.0-rc.5",
+    "module": "9.0.0-rc.5"
   }
 }

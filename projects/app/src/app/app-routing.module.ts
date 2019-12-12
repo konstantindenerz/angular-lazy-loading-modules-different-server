@@ -6,38 +6,22 @@ const routes: Routes = [
   {
     path: '', component: MainLayoutComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: '', pathMatch: 'full', redirectTo: 'home' },
+      { path: 'home', component: DashboardComponent },
       {
         path: 'settings',
         loadChildren: () => import('projects/settings/src/lib/settings.module').then((m) => m.SettingsModule),
       },
       {
         path: 'module/:id', component: DynamicLayoutComponent,
-      },
+      }
     ],
   },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot([
-    {
-      path: '', component: MainLayoutComponent,
-      children: [
-        { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-        { path: 'dashboard', component: DashboardComponent },
-        {
-          path: 'settings',
-          loadChildren: () => import('projects/settings/src/lib/settings.module').then(m => m.SettingsModule),
-        },
-        {
-          path: 'module/:id', component: DynamicLayoutComponent,
-        },
-      ],
-    },
-
-  ], { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {

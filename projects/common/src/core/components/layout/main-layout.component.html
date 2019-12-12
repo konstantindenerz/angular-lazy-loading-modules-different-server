@@ -1,4 +1,10 @@
-<ng-container *ngIf="modules$ | async as modules">
-  <labs-menu [items]="modules"></labs-menu>
+<ng-container *ngIf="modules$ | async as modules; else loading">
   <router-outlet></router-outlet>
+  <labs-menu [items]="modules"></labs-menu>
 </ng-container>
+
+<ng-template #loading>
+  <div class="loading">
+    loading modules
+  </div>
+</ng-template>

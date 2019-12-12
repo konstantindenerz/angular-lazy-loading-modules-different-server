@@ -25,10 +25,11 @@
             "aot": true,
             "assets": [
               "projects/app/src/favicon.ico",
-              "projects/app/src/assets",
+              "projects/app/src/assets"
             ],
             "styles": [
-              "projects/app/src/styles.scss"
+              "projects/app/src/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ]
           },
           "configurations": {
@@ -47,6 +48,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "es5BrowserSupport": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -215,14 +217,8 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./projects/reporting/extra-webpack.config.js",
-              "mergeStrategies": {
-                "externals": "replace"
-              }
-            },
             "outputPath": "server/module/reporting",
             "index": "projects/reporting/src/index.html",
             "main": "projects/reporting/src/main.ts",
@@ -247,6 +243,7 @@
                   "with": "projects/reporting/src/environments/environment.prod.ts"
                 }
               ],
+              "es5BrowserSupport": false,
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
@@ -273,7 +270,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "reporting:build"
+            "browserTarget": "reporting:build",
+            "port": 4202
           },
           "configurations": {
             "production": {
