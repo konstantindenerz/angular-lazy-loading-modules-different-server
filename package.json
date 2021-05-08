@@ -47,7 +47,7 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "local-web-server": "^2.6.1",
-    "ng-packagr": "^9.0.0-rc.2",
+    "ng-packagr": "^10.1.1",
     "ngx-build-plus": "^9.0.2",
     "nodemon": "^2.0.1",
     "protractor": "~5.4.2",
